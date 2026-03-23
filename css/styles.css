@@ -192,11 +192,10 @@ section:not(.features-section) .card {
     justify-content: space-between;
     align-items: stretch;
     gap: 40px;
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 .nav-menu .link {
+    display: block;
     padding: 24px 0;
     color: #2E2F42;
     font-size: 16px;
@@ -205,6 +204,25 @@ section:not(.features-section) .card {
     text-align: center;
     line-height: 24px;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-menu .link.current {
+  position: relative;
+}
+
+.nav-menu .link.current::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: #404bbf;
 }
 
 .nav-menu .link:hover,
@@ -230,7 +248,16 @@ section:not(.features-section) .card {
 }
 
 .hero-section {
-    background-color: #2E2F42;
+    background-image:
+		linear-gradient(
+			to bottom,
+			rgba(46, 47, 66, 0.7),
+			rgba(46, 47, 66, 0.7)),
+		url(./images/people-office.jpg);
+    background-image: url(./images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .team-section {
