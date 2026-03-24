@@ -322,6 +322,28 @@ h2 {
     max-width: 264px;
 }
 
+.social-links .link {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links .icon {
+    fill: #fff;
+}
+
+.social-links .link:hover {
+    background-color: #fff;
+}
+
+.social-links .link:hover .icon {
+    fill: #03a9f4;
+}
+
 .visually-hidden {
    position: absolute;
    width: 1px;
