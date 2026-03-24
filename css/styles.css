@@ -12,6 +12,12 @@
   --white: #FFFFFF;
   --dairy: #FCFCFC;
   --button-color: #4d5ae5;
+
+  --button-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  --light-card-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08);
+  --medium-card-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.16),
+        0px 2px 1px 0px rgba(0, 0, 0, 0.08);
 }
 
 body {
@@ -100,6 +106,9 @@ ul, ol {
 .card {
     background-color: #FFFFFF;
     border: none;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.16),
+        0px 2px 1px 0px rgba(0, 0, 0, 0.08);
 }
 
 section:not(.features-section) .card {
@@ -112,10 +121,17 @@ section:not(.features-section) .card {
 
 .team-section .card {
     border-radius: 0px 0px 4px 4px;
+    box-shadow: var(--medium-card-shadow);
 }
 
 .portfolio-section .card {
     flex-basis: calc((100% - 2*24px) / 3);
+    box-shadow: var(--light-card-shadow);
+}
+
+.portfolio-section .card:hover,
+.portfolio-section .card:focus {
+    box-shadow: var(--medium-card-shadow);
 }
 
 .card-content {
@@ -288,7 +304,7 @@ h2 {
     min-width: 169px;
     height: 56px;
     border: none;
-    color: #FFFFFF;
+    color: var(--white);
     background-color: var(--button-color);
     border-radius: 4px;
     cursor: pointer;
@@ -297,6 +313,7 @@ h2 {
     line-height: 24px;
     letter-spacing: 0.04em;
     margin: 0 auto;
+    box-shadow: var(--button-shadow);
 }
 
 .button:hover,
