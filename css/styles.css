@@ -126,9 +126,7 @@ section:not(.features-section) .card {
 
 .team-section .card {
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.08),
-        0px 1px 1px rgba(0, 0, 0, 0.16),
-        0px 2px 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.16), 0px 2px 1px rgba(0, 0, 0, 0.08);
 }
 
 .portfolio-section .card {
@@ -138,9 +136,7 @@ section:not(.features-section) .card {
 
 .portfolio-section .card:hover,
 .portfolio-section .card:focus {
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.08),
-        0px 1px 1px 0px rgba(0, 0, 0, 0.16),
-        0px 2px 1px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.08), 0px 1px 1px 0px rgba(0, 0, 0, 0.16), 0px 2px 1px 0px rgba(0, 0, 0, 0.08);
 }
 
 .card-icon-container {
@@ -428,7 +424,13 @@ h2 {
     transition: background-color var(--transition-settings);
 }
 
-.social-links .link:hover {
+.team-section .social-links .link:hover,
+.team-section .social-links .link:focus {
+    background-color: #404bbf;
+}
+
+.footer .social-links .link:hover,
+.footer .social-links .link:focus {
     background-color: #31d0aa;
 }
 
