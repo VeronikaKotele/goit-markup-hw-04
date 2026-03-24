@@ -260,7 +260,7 @@ section:not(.features-section) .card {
 }
 
 .team-section {
-    background-color: #F4F4FD;
+    background-color: var(--cloud);
 }
 
 h1 {
@@ -309,39 +309,65 @@ h2 {
     padding: 100px 0;
 }
 
+.footer .container {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    gap: 120px;
+}
+
 .footer .brand {
     display: inline-block;
     margin-bottom: 16px;
 }
 
 .footer .footer-text {
-    color: #F4F4FD;
+    color: var(--cloud);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     max-width: 264px;
 }
 
+.social-title {
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+
+.social-links {
+    display: inline;
+}
+
 .social-links .link {
-    display: flex;
+    display: inline-flex;
     width: 40px;
     height: 40px;
-    background-color: #03a9f4;
+    background-color: var(--iris);
     border-radius: 50%;
     justify-content: center;
     align-items: center;
 }
 
+.social-links .link:not(:last-child) {
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
 .social-links .icon {
-    fill: #fff;
+    fill: var(--cloud);
 }
 
 .social-links .link:hover {
-    background-color: #fff;
+    background-color: var(--cloud);
 }
 
 .social-links .link:hover .icon {
-    fill: #03a9f4;
+    fill: var(--iris);
 }
 
 .visually-hidden {
