@@ -26,6 +26,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+main {
+    flex-grow: 1;
+}
+
 h1, h2, h3, h4, h5, h6, p, ol, ul, li {
     margin: 0;
 }
@@ -106,9 +110,7 @@ ul, ol {
 .card {
     background-color: #FFFFFF;
     border: none;
-    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08),
-        0px 1px 1px 0px rgba(0, 0, 0, 0.16),
-        0px 2px 1px 0px rgba(0, 0, 0, 0.08);
+    flex-grow: 1;
 }
 
 section:not(.features-section) .card {
@@ -132,6 +134,20 @@ section:not(.features-section) .card {
 .portfolio-section .card:hover,
 .portfolio-section .card:focus {
     box-shadow: var(--medium-card-shadow);
+}
+
+.card-icon-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cornflower);
+    border: var(--light-slate) 1px solid;
+    border-radius: 5%;
+}
+
+.card-icon {
+    margin: 24px 24px;
 }
 
 .card-content {
@@ -162,12 +178,20 @@ section:not(.features-section) .card {
     letter-spacing: 0.02em;
 }
 
+.features-section .card-title {
+    margin: 8px auto;
+}
+
 .card-text {
     text-align: center;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+}
+
+.features-section .card-text {
+    text-align: left;
 }
 
 .brand {
@@ -375,7 +399,7 @@ h2 {
     margin-bottom: 16px;
 }
 
-.social-links .icon {
+.social-links .social-icon {
     fill: var(--cloud);
 }
 
@@ -383,7 +407,7 @@ h2 {
     background-color: var(--cloud);
 }
 
-.social-links .link:hover .icon {
+.social-links .link:hover .social-icon {
     fill: var(--iris);
 }
 
