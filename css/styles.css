@@ -126,19 +126,19 @@ section:not(.features-section) .card {
 
 .team-section .card {
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08),
-        0px 1px 1px 0px rgba(0, 0, 0, 0.16),
-        0px 2px 1px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.08),
+        0px 1px 1px rgba(0, 0, 0, 0.16),
+        0px 2px 1px rgba(0, 0, 0, 0.08);
 }
 
 .portfolio-section .card {
     flex-basis: calc((100% - 2*24px) / 3);
-    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.08);
 }
 
 .portfolio-section .card:hover,
 .portfolio-section .card:focus {
-    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08),
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.08),
         0px 1px 1px 0px rgba(0, 0, 0, 0.16),
         0px 2px 1px 0px rgba(0, 0, 0, 0.08);
 }
@@ -259,7 +259,7 @@ section:not(.features-section) .card {
 
 .nav-menu .link.current {
   position: relative;
-  color: var(--ocean);
+  color: #404bbf;
 }
 
 .nav-menu .link.current::after {
@@ -273,12 +273,12 @@ section:not(.features-section) .card {
   height: 4px;
   border-radius: 2px;
 
-  background-color: var(--ocean);
+  background-color: #404bbf;
 }
 
 .nav-menu .link:hover,
 .nav-menu .link:focus {
-    color: var(--ocean);
+    color: #404bbf;
 }
 
 .address {
@@ -296,7 +296,7 @@ section:not(.features-section) .card {
 
 .address .address-el:hover,
 .address .address-el:focus {
-    color: var(--ocean);
+    color: #404bbf;
 }
 
 .hero-section {
@@ -356,7 +356,7 @@ h2 {
 
 .button:hover,
 .button:focus {
-    background-color: var(--ocean);
+    background-color: #404bbf;
 }
 
 .footer {
@@ -463,7 +463,7 @@ h2 {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin: 40px 32px auto;
+  padding: 40px 32px;
   width: 100%;
   height: 100%;
   transform: translateY(100%);
