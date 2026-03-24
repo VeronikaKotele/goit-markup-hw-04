@@ -6,18 +6,20 @@
   --slate: #434455; 
   --light-slate: #8E8F99;
   --cornflower: #E7E9FC;
-  --cloud: #F4F4FD;
+  --cloud: #f4f4fd;
   --navy-blue-modal: #2E2F4266;
   --grey: #2E2F42B2;
   --white: #FFFFFF;
   --dairy: #FCFCFC;
-  --button-color: #4d5ae5;
+  --button-color: var(--iris);
 
   --button-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   --light-card-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08);
   --medium-card-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08),
         0px 1px 1px 0px rgba(0, 0, 0, 0.16),
         0px 2px 1px 0px rgba(0, 0, 0, 0.08);
+
+  --transition-settings: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -111,7 +113,7 @@ ul, ol {
     background-color: #FFFFFF;
     border: none;
     flex-grow: 1;
-    transition: box-shadow 250ms ease;
+    transition: box-shadow var(--transition-settings);
 }
 
 section:not(.features-section) .card {
@@ -139,12 +141,14 @@ section:not(.features-section) .card {
 
 .card-icon-container {
     width: 100%;
+    height: 112px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--cornflower);
     border: var(--light-slate) 1px solid;
-    border-radius: 5%;
+    border-radius: 4px;
+    margin-bottom: 8px;
 }
 
 .card-icon {
@@ -175,15 +179,11 @@ section:not(.features-section) .card {
 
 .card-title, h3 {
     text-align: center;
-    color: #2E2F42;
+    color: var(--navy-blue);
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-}
-
-.features-section .card-title {
-    margin: 8px auto;
 }
 
 .card-text {
@@ -199,7 +199,7 @@ section:not(.features-section) .card {
 }
 
 .brand {
-    color: #4D5AE5;
+    color: var(--iris);
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-style: bold;
@@ -214,6 +214,9 @@ section:not(.features-section) .card {
 
 .header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .page-nav, .address {
@@ -229,7 +232,6 @@ section:not(.features-section) .card {
     justify-content: space-between;
 }
 
-
 .nav-menu {
     display: flex;
     flex-direction: row;
@@ -241,18 +243,19 @@ section:not(.features-section) .card {
 .nav-menu .link {
     display: block;
     padding: 24px 0;
-    color: #2E2F42;
+    color: var(--navy-blue);
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
     text-align: center;
     line-height: 24px;
     letter-spacing: 0.02em;
-    transition: color 250ms ease;
+    transition: color var(--transition-settings);
 }
 
 .nav-menu .link.current {
   position: relative;
+  color: var(--ocean);
 }
 
 .nav-menu .link.current::after {
@@ -266,12 +269,12 @@ section:not(.features-section) .card {
   height: 4px;
   border-radius: 2px;
 
-  background-color: #404bbf;
+  background-color: var(--ocean);
 }
 
 .nav-menu .link:hover,
 .nav-menu .link:focus {
-    color: #404BBF;
+    color: var(--ocean);
 }
 
 .address {
@@ -284,12 +287,12 @@ section:not(.features-section) .card {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    transition: color 250ms ease;
+    transition: color var(--transition-settings);
 }
 
 .address .address-el:hover,
 .address .address-el:focus {
-    color: #404BBF;
+    color: var(--ocean);
 }
 
 .hero-section {
@@ -302,6 +305,7 @@ section:not(.features-section) .card {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    max-width: 1440px;
 }
 
 .team-section {
@@ -319,7 +323,7 @@ h1 {
 }
 
 h2 {
-    color: #2E2F42;
+    color: var(--navy-blue);
     font-weight: 500;
     font-size: 36px;
     letter-spacing: 0.02em;
@@ -343,26 +347,28 @@ h2 {
     letter-spacing: 0.04em;
     margin: 0 auto;
     box-shadow: var(--button-shadow);
-    transition: background-color 250ms ease;
+    transition: background-color var(--transition-settings);
 }
 
 .button:hover,
 .button:focus {
-    background-color: #404BBF;
+    background-color: var(--ocean);
 }
 
 .footer {
-    background-color: #2E2F42;
+    background-color: var(--navy-blue);
     padding: 100px 0;
 }
 
 .footer .container {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 0 auto;
-    gap: 120px;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.footer-slogan {
+    margin-right: 120px;
 }
 
 .footer .brand {
@@ -410,7 +416,7 @@ h2 {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    transition: background-color 250ms ease;
+    transition: background-color var(--transition-settings);
 }
 
 .social-links .link:hover {
@@ -437,10 +443,11 @@ h2 {
 
 .overlay {
   position: absolute;
-  transition: transform 250ms ease-in-out;
+  transition: transform var(--transition-settings);
   background-color: var(--iris);
   width: 100%;
   height: 100%;
+  transform: translatey(100%);
 }
 
 .overlay-text {
@@ -452,5 +459,5 @@ h2 {
 }
 
 .portfolio-section .card:hover .overlay {
-  transform: translatey(-100%);
+  transform: translatey(0);
 }
