@@ -111,6 +111,7 @@ ul, ol {
     background-color: #FFFFFF;
     border: none;
     flex-grow: 1;
+    transition: box-shadow 250ms ease;
 }
 
 section:not(.features-section) .card {
@@ -247,7 +248,7 @@ section:not(.features-section) .card {
     text-align: center;
     line-height: 24px;
     letter-spacing: 0.02em;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms ease;
 }
 
 .nav-menu .link.current {
@@ -283,6 +284,7 @@ section:not(.features-section) .card {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
+    transition: color 250ms ease;
 }
 
 .address .address-el:hover,
@@ -341,6 +343,7 @@ h2 {
     letter-spacing: 0.04em;
     margin: 0 auto;
     box-shadow: var(--button-shadow);
+    transition: background-color 250ms ease;
 }
 
 .button:hover,
@@ -407,6 +410,7 @@ h2 {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms ease;
 }
 
 .social-links .link:hover {
